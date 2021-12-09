@@ -41,3 +41,19 @@ const swiper = new Swiper('.swiper', {
   },
 });
 swiper;
+
+// Accordion
+const accordionItems = document.querySelectorAll('.accordion__item');
+
+if (accordionItems) {
+  accordionItems.forEach((item) => {
+    item.addEventListener('click', function() {
+      if (this.classList.contains('accordion__item--opened')) {
+        this.classList.remove('accordion__item--opened');
+      } else {
+        accordionItems.forEach((elem) => elem.classList.remove('accordion__item--opened'));
+        this.classList.toggle('accordion__item--opened');
+      }
+    });
+  });
+}

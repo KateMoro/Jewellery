@@ -1,0 +1,23 @@
+.faq {
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media (max-width: 1023px) {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 26px;
+    padding-bottom: 25px;
+  }
+}
+
+.faq h2 {
+  @include section-title;
+  margin-bottom: 48px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 28px;
+  }
+}

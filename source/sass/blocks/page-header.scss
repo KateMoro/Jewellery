@@ -1,0 +1,128 @@
+.page-header {
+  position: relative;
+  padding-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content;
+  grid-template-areas:
+    "search . login cart"
+    "nav nav nav nav";
+  align-items: center;
+
+  @media (max-width: 1023px) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+    grid-template-areas:
+      "toggle . cart"
+      "search search search"
+      "nav nav nav"
+      "login login login";
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -33px;
+
+  @media (max-width: 767px) {
+    top: 20px;
+    margin-left: -26px;
+  }
+}
+
+.page-header__toggle {
+  grid-area: toggle;
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+    padding: 5px 0;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.page-header__toggle svg {
+  display: block;
+  fill: none;
+  stroke: var(--color-gray-900);
+}
+
+.page-header__toggle:hover svg {
+  opacity: 0.7;
+}
+
+.page-header__toggle:active {
+  opacity: 0.3;
+}
+
+.page-header__form {
+  grid-area: search;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.page-header__login {
+  grid-area: login;
+
+  @media (max-width: 1023px) {
+    display: none;
+    margin-bottom: 80px;
+  }
+}
+
+.page-header__cart {
+  grid-area: cart;
+  margin-left: 35px;
+}
+
+.page-header__cart svg {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+    fill: none;
+    stroke: var(--color-gray-900);
+  }
+}
+
+.page-header__nav {
+  grid-area: nav;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+// OPENED
+.page-header--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  overflow-y: scroll;
+  background-color: var(--color-accent-100);
+}
+
+.page-header--opened .page-header__form {
+  display: block;
+}
+
+.page-header--opened .page-header__login {
+  display: block;
+}
+
+.page-header--opened .page-header__nav {
+  display: block;
+}

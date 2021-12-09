@@ -1,0 +1,26 @@
+.login {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  text-decoration: none;
+  transition: color 0.3s;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--color-white);
+  }
+}
+
+.login:hover {
+  color: var(--color-accent-100);
+
+  @media (max-width: 1023px) {
+    color: var(--color-gray-900);
+  }
+}
+
+.login:active {
+  opacity: 0.7;
+}

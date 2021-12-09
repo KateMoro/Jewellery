@@ -19,7 +19,65 @@
   <title>Jewellery</title>
 </head>
 
-<body>
+<body class="no-js">
+  <header class="page-header container">
+    <a class="page-header__logo logo">
+      <svg aria-label="Logo Ch" width="66" height="66">
+        <use href="img/sprite_auto.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <button class="page-header__toggle" type="button" aria-label="Open menu">
+      <svg aria-hidden="true" focusable="false" width="25" height="18">
+        <use href="img/sprite_auto.svg#icon-menu"></use>
+      </svg>
+    </button>
+    <form class="page-header__form search-form">
+      <label class="search-form__field">
+        <span class="visually-hidden">Site search</span>
+        <svg aria-hidden="true" focusable="false" width="14" height="14">
+          <use href="img/sprite_auto.svg#icon-search"></use>
+        </svg>
+        <input id="search" type="search" name="search" placeholder="Type here to search">
+      </label>
+    </form>
+    <a class="page-header__login login" href="#">Login</a>
+    <a class="page-header__cart cart" href="#">
+      <span>Cart 0</span>
+      <svg class="" width="20" height="18">
+        <use href="img/sprite_auto.svg#icon-cart"></use>
+      </svg>
+    </a>
+    <nav class="page-header__nav main-nav">
+      <ul class="main-nav__list">
+        <li>
+          <a href="#">What’s new</a>
+        </li>
+        <li>
+          <a href="#">Chokers</a>
+        </li>
+        <li>
+          <a href="#">Necklaces</a>
+        </li>
+        <li>
+          <a href="#">Rings</a>
+        </li>
+        <li>
+          <a href="#">Earrings</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list main-nav__list--additional">
+        <li>
+          <a href="#">About CH</a>
+        </li>
+        <li>
+          <a href="#">Stores & Hours</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
 </body>
 </html>

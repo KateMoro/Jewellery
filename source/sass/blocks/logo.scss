@@ -1,0 +1,9 @@
+.logo svg {
+  display: block;
+  fill: var(--color-accent-100);
+
+  @media (max-width: 767px) {
+    width: 52px;
+    height: 52px;
+  }
+}

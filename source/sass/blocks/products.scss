@@ -1,0 +1,130 @@
+.products {
+  padding-top: 110px;
+
+  @media (max-width: 1023px) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 91px;
+  }
+}
+
+.products__list {
+  @include list-reset;
+  margin-bottom: 45px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 26px;
+  }
+}
+
+.products__list li {
+  text-align: center;
+}
+
+.products__list a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.products__list img {
+  width: 100%;
+}
+
+.products__list h3 {
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+
+  @media (max-width: 1023px) {
+    margin-top: 18px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 11px;
+  }
+}
+
+.products__list p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.products__list a:hover img {
+  outline: 1px solid var(--color-accent-100);
+}
+
+.products__list a:hover h3 {
+  color: var(--color-accent-100);
+}
+
+.products__list a:hover p {
+  color: var(--color-accent-100);
+}
+
+.products__list a:active {
+  opacity: 0.7;
+}
+
+.products__button {
+  position: absolute;
+  top: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.products__button svg {
+  width: 36px;
+  height: 15px;
+  stroke: var(--color-accent-100);
+}
+
+.products__button:hover {
+  background-color: var(--color-accent-100);
+}
+
+.products__button:hover svg {
+  stroke: var(--color-white);
+}
+
+.products__button--prev {
+  left: -7px;
+}
+
+.products__button--next {
+  right: -7px;
+}
+
+.products__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products__pagination span {
+  padding: 5px;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.products__pagination span:hover {
+  border-color: var(--color-accent-100);
+}
+
+.products__pagination .swiper-pagination-bullet-active {
+  color: var(--color-gray-900);
+}

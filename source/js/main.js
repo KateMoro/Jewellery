@@ -1,7 +1,5 @@
 'use strict';
 
-document.body.classList.remove('no-js');
-
 const pageHeader = document.querySelector('.page-header');
 const toggleButton = pageHeader.querySelector('.page-header__toggle');
 const login = pageHeader.querySelector('.page-header__login');
@@ -125,10 +123,21 @@ function closeFilterFormModal() {
   document.removeEventListener('keydown', modalEscKeydownHandler);
 }
 
+// Accordion FAQ
+const accordionFaqItems = document.querySelectorAll('.faq .accordion__item');
+
+if (accordionFaqItems) {
+  accordionFaqItems.forEach((item) => {
     item.addEventListener('click', function() {
       if (this.classList.contains('accordion__item--opened')) {
         this.classList.remove('accordion__item--opened');
       } else {
+        accordionFaqItems.forEach((elem) => elem.classList.remove('accordion__item--opened'));
+        this.classList.add('accordion__item--opened');
+      }
+    });
+  });
+}
 
 // Accordion Filters
 const accordionFilterFormItems = document.querySelectorAll('.filter-form .accordion__item');
@@ -136,7 +145,7 @@ const accordionFilterFormItems = document.querySelectorAll('.filter-form .accord
 if (accordionFilterFormItems) {
   accordionFilterFormItems.forEach((item) => {
     item.addEventListener('click', function() {
-        this.classList.toggle('accordion__item--opened');
+      this.classList.toggle('accordion__item--opened');
     });
   });
 }

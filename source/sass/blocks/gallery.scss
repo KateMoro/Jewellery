@@ -10,7 +10,7 @@
 
   @media (max-width: 767px) {
     padding-top: 35px;
-    padding-bottom: 122px;
+    padding-bottom: 66px;
   }
 }
 
@@ -45,12 +45,11 @@
   @include list-reset;
   display: grid;
   grid-template-columns: 19.6% 34% 19.6% 19.6%;
-  column-gap: 2.4%;
-  row-gap: 8.5%;
+  column-gap: 28px;
+  row-gap: 32px;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 7.4%;
   }
 }
 

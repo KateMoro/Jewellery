@@ -29,6 +29,8 @@
 .new-in > a {
   @include section-link;
   transition: color 0.3s;
+  position: relative;
+  z-index: 5;
 
   @media (max-width: 1023px) {
     padding-bottom: 4px;

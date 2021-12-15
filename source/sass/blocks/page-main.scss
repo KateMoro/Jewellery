@@ -1,0 +1,22 @@
+.page-main--catalog {
+  position: relative;
+}
+
+.page-main--catalog::before {
+  content: "";
+  position: absolute;
+  bottom: 132px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-gray-100);
+}
+
+
+.page-main__section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-accent-200);
+}

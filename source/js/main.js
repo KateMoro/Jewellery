@@ -17,6 +17,9 @@ const filtersToggle = document.querySelector('.filters__toggle');
 const filtersInner = document.querySelector('.filters__inner');
 const filterFormClose = document.querySelector('.filter-form__close');
 
+document.body.classList.remove('no-js');
+pageHeader.classList.remove('page-header--opened');
+
 // Local storage
 let isStorageSupport = true;
 let storage = '';

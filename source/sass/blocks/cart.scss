@@ -2,17 +2,16 @@
   font-size: 14px;
   line-height: 1.5;
   font-weight: 500;
-  color: var(--color-gray-900);
   text-decoration: none;
-  transition: color 0.3s;
+  color: var(--color-gray-900);
 }
 
 .cart:hover {
-  color: var(--color-accent-100);
+  opacity: 0.7;
 }
 
 .cart:active {
-  opacity: 0.7;
+  opacity: 0.3;
 }
 
 .cart span {

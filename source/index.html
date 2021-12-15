@@ -40,7 +40,7 @@
         <input id="search" type="search" name="search" placeholder="Type here to search">
       </label>
     </form>
-    <a class="page-header__login login" href="#">Login</a>
+    <a class="page-header__login login" href="login.html">Login</a>
     <a class="page-header__cart cart" href="#">
       <span>Cart 0</span>
       <svg class="" width="20" height="18">
@@ -881,6 +881,29 @@
       </ul>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__content">
+      <form class="login-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
+        <h3>Log In</h3>
+        <div class="login-form__field">
+          <label class="visually-hidden" for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Your E-mail" required>
+        </div>
+        <div class="login-form__field">
+          <label class="visually-hidden" for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <a href="#">Forgot your password?</a>
+        </div>
+        <button class="login-form__button button button--primary" type="submit">Log In</button>
+        <p class="login-form__text">
+          Don’t have an account?
+          <a href="#">Sign up</a>
+        </p>
+      </form>
+      <button class="modal__close" aria-label="Close"></button>
+    </div>
+  </section>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

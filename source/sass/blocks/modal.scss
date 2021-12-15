@@ -1,0 +1,72 @@
+.modal {
+  display: none;
+}
+
+.modal--show {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.modal__content {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  margin: auto;
+  padding: 45px;
+  padding-top: 190px;
+  text-align: center;
+  background-color: var(--color-accent-200);
+  background-image: url("../img/bg-modal@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 138px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-modal@2x.jpg");
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 442px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 270px;
+    padding: 15px;
+    padding-top: 122px;
+    background-image: url("../img/bg-modal-mobile@1x.jpg");
+    background-size: 100% 84px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-modal-mobile@2x.jpg");
+    }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 27px;
+  height: 27px;
+  background-color: transparent;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  opacity: 0.7;
+}
+
+.modal__close:active {
+  opacity: 0.3;
+}

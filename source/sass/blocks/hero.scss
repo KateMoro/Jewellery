@@ -12,6 +12,14 @@
   }
 }
 
+.hero--catalog {
+  background-image: url("../img/bg-hero-catalog@1x.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-hero-catalog@2x.jpg");
+  }
+}
+
 .hero__container {
   display: grid;
   place-content: center;
@@ -21,9 +29,14 @@
   padding-bottom: 50px;
 }
 
+.hero--catalog .hero__container {
+  min-height: 261px;
+}
+
 .hero h2 {
   margin: 0;
   font-size: 45px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
@@ -32,12 +45,23 @@
   }
 }
 
+.hero--catalog h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
 .hero p {
   margin: 0;
   font-style: italic;
   font-size: 38px;
+  line-height: 1.1;
 
   @media (max-width: 767px) {
     font-size: 34px;
+    letter-spacing: 0;
   }
+}
+
+.hero--catalog p {
+  font-size: 22px;
 }

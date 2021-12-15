@@ -1,0 +1,42 @@
+.range-slider {
+  position: relative;
+}
+
+.range-slider__scale {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  height: 1px;
+  background-color: var(--color-accent-200);
+}
+
+.range-slider__bar {
+  margin: 0 44px;
+  height: 1px;
+  background-color: var(--color-accent-100);
+}
+
+.range-slider__toggle {
+  position: absolute;
+  top: -8px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-accent-100);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-slider__toggle:hover {
+  background-color: var(--color-gray-900);
+}
+
+.range-slider__toggle:active {
+  background-color: var(--color-gray-500);
+}
+
+.range-slider__toggle--min {
+  left: 44px;
+}
+
+.range-slider__toggle--max {
+  right: 34px;
+}

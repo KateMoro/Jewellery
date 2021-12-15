@@ -1,0 +1,49 @@
+.filter-form {
+  position: relative;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.filter-form__button {
+  display: block;
+  margin-top: 29px;
+  width: 100%;
+}
+
+.filter-form__close {
+  display: none;
+}
+
+.filters--show .filter-form {
+  @media (max-width: 1023px) {
+    display: block;
+    margin: auto;
+    background-color: var(--color-white);
+    width: 85%;
+    max-width: 462px;
+    padding-bottom: 40px;
+  }
+}
+
+.filters--show .filter-form__button {
+  max-width: 377px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filters--show .filter-form__close {
+  display: block;
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  background-image: url("../img/icon-cross-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

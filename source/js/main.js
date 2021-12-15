@@ -11,6 +11,12 @@ const loginModalClose = modal.querySelector('.modal__close');
 const loginFormModal = modal.querySelector('.login-form');
 const emailInputModal = loginFormModal.querySelector('[name="email"]');
 const passwordInputModal = loginFormModal.querySelector('[name="password"]');
+
+const filters = document.querySelector('.filters');
+const filtersToggle = document.querySelector('.filters__toggle');
+const filtersInner = document.querySelector('.filters__inner');
+const filterFormClose = document.querySelector('.filter-form__close');
+
 // Local storage
 let isStorageSupport = true;
 let storage = '';
@@ -37,13 +43,19 @@ window.addEventListener('click', (evt) => {
   if (evt.target === modal) {
     closeLoginModal();
   }
+  if (evt.target === filtersInner) {
+    closeFilterFormModal();
+  }
 });
 
 const modalEscKeydownHandler = (evt) => {
   if (evt.key === 'Escape' || evt.key === 'Esc') {
     evt.preventDefault();
     closeLoginModal();
+    closeFilterFormModal();
+  }
 };
+
 if (login) {
   login.addEventListener('click', (evt) => {
     evt.preventDefault();
@@ -88,15 +100,40 @@ function closeLoginModal() {
   document.removeEventListener('keydown', modalEscKeydownHandler);
 }
 
-if (accordionItems) {
-  accordionItems.forEach((item) => {
+// Filters
+
+if (filtersToggle) {
+  filtersToggle.addEventListener('click', openFilterFormModal);
+}
+
+if (filterFormClose) {
+  filterFormClose.addEventListener('click', closeFilterFormModal);
+}
+
+function openFilterFormModal() {
+  filters.classList.add('filters--show');
+  document.body.style.overflow = 'hidden';
+  document.addEventListener('keydown', modalEscKeydownHandler);
+}
+
+function closeFilterFormModal() {
+  filters.classList.remove('filters--show');
+  document.body.style.overflow = 'auto';
+  document.removeEventListener('keydown', modalEscKeydownHandler);
+}
+
     item.addEventListener('click', function() {
       if (this.classList.contains('accordion__item--opened')) {
         this.classList.remove('accordion__item--opened');
       } else {
-        accordionItems.forEach((elem) => elem.classList.remove('accordion__item--opened'));
+
+// Accordion Filters
+const accordionFilterFormItems = document.querySelectorAll('.filter-form .accordion__item');
+
+if (accordionFilterFormItems) {
+  accordionFilterFormItems.forEach((item) => {
+    item.addEventListener('click', function() {
         this.classList.toggle('accordion__item--opened');
-      }
     });
   });
 }

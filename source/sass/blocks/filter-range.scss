@@ -1,0 +1,19 @@
+.filter-range__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filter-range__controls label {
+  display: flex;
+  margin-left: auto;
+}
+
+.filter-range__controls input {
+  max-width: 50px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  font-weight: 500;
+  color: inherit;
+  border: none;
+}

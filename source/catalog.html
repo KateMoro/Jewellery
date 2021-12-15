@@ -88,6 +88,96 @@
       </div>
     </section>
 
+      <section class="filters">
+        <h2 class="visually-hidden">Product filters</h2>
+        <button class="filters__toggle button button--primary">Filter</button>
+        <div class="filters__inner">
+          <form class="filter-form accordion accordion--filters" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="filter-fieldset accordion__item accordion__item--opened">
+              <legend>
+                <button type="button">Product</button>
+              </legend>
+              <ul class="filter-fieldset__list accordion__content">
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked>
+                  <label for="necklaces">Necklaces</label>
+                </li>
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" checked>
+                  <label for="chokers">Chokers</label>
+                </li>
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="rings" id="rings">
+                  <label for="rings">Rings</label>
+                </li>
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="earrings" id="earrings" checked>
+                  <label for="earrings">Earrings</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-fieldset accordion__item">
+              <legend>
+                <button type="button">Material</button>
+              </legend>
+              <ul class="filter-fieldset__list accordion__content">
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="gold" id="gold">
+                  <label for="gold">Gold</label>
+                </li>
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="silver" id="silver">
+                  <label for="silver">Silver</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-fieldset accordion__item">
+              <legend>
+                <button type="button">Collection</button>
+              </legend>
+              <ul class="filter-fieldset__list accordion__content">
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo">
+                  <label for="pink-flamingo">Pink flamingo</label>
+                </li>
+                <li class="filter-fieldset__item checkbox-field">
+                  <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
+                  <label for="dreams">Dreams</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-fieldset accordion__item accordion__item--opened">
+              <legend>
+                <button type="button">Price</button>
+              </legend>
+              <div class="filter-fieldset__filter-range filter-range accordion__content">
+                <div class="filter-range__slider range-slider">
+                  <div class="range-slider__scale">
+                    <div class="range-slider__bar"></div>
+                  </div>
+                  <div class="range-slider__toggle range-slider__toggle--min" aria-label="Reduce price range" tabindex="0"></div>
+                  <div class="range-slider__toggle range-slider__toggle--max" aria-label="Increase price range" tabindex="0"></div>
+                </div>
+                <div class="filter-range__controls">
+                  <label>
+                    <span class="visually-hidden">From</span>
+                    <span>$</span>
+                    <input type="text" id="min-range" name="min-range" value="55">
+                  </label>
+                  <label>
+                    <span class="visually-hidden">To</span>
+                    <span>$</span>
+                    <input type="text" id="max-range" name="max-range" value="155">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button class="filter-form__button button button--primary" type="submit">Apply</button>
+            <button class="filter-form__button button button--secondary" type="reset">Clear All</button>
+            <button class="filter-form__close" type="button" aria-label="Close"></button>
+          </form>
+        </div>
+      </section>
   </main>
 
   <footer class="page-footer">

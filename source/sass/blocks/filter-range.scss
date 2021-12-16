@@ -6,6 +6,26 @@
 .filter-range__controls label {
   display: flex;
   margin-left: auto;
+
+  @media (max-width: 1023px) {
+    padding-top: 5px;
+  }
+}
+
+.filter-range__controls label:first-child {
+  @media (max-width: 1023px) {
+    margin-left: 72px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 20px;
+  }
+}
+
+.filter-range__controls label:nth-child(2) {
+  @media (max-width: 1023px) {
+    margin-left: 42px;
+  }
 }
 
 .filter-range__controls input {
@@ -16,4 +36,8 @@
   font-weight: 500;
   color: inherit;
   border: none;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
 }

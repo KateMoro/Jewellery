@@ -10,24 +10,52 @@
 }
 
 .filter-fieldset__filter-range {
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 22px;
+
+  @media (max-width: 1023px) {
+    margin-top: 63px;
+    padding-bottom: 41px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 50px;
+    padding-bottom: 26px;
+  }
 }
 
 .filter-fieldset legend {
   float: left;
   width: 100%;
   padding: 0;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+  }
 }
 
 .filter-fieldset__list {
   @include list-reset;
   margin-top: 44px;
   padding: 21px;
+
+  @media (max-width: 1023px) {
+    padding-left: 39px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 50px;
+    padding-left: 22px;
+    padding-bottom: 11px;
+  }
 }
 
 .filter-fieldset__item {
   margin-bottom: 9px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 17px;
+  }
 }
 
 .filters--show .filter-fieldset {

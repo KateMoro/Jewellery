@@ -13,6 +13,16 @@
   margin: 0 44px;
   height: 1px;
   background-color: var(--color-accent-100);
+
+  @media (max-width: 1023px) {
+    margin-left: 79px;
+    margin-right: 139px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 30px;
+    margin-right: 45px;
+  }
 }
 
 .range-slider__toggle {
@@ -23,6 +33,11 @@
   background-color: var(--color-accent-100);
   border-radius: 50%;
   cursor: pointer;
+
+  @media (max-width: 1023px) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .range-slider__toggle:hover {
@@ -35,8 +50,24 @@
 
 .range-slider__toggle--min {
   left: 44px;
+
+  @media (max-width: 1023px) {
+    left: 79px;
+  }
+
+  @media (max-width: 767px) {
+    left: 30px;
+  }
 }
 
 .range-slider__toggle--max {
   right: 34px;
+
+  @media (max-width: 1023px) {
+    right: 139px;
+  }
+
+  @media (max-width: 767px) {
+    right: 45px;
+  }
 }

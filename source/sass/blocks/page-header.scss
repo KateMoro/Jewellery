@@ -42,6 +42,7 @@
 .page-header__toggle {
   grid-area: toggle;
   display: none;
+  color: var(--color-gray-900);
 
   @media (max-width: 1023px) {
     display: block;
